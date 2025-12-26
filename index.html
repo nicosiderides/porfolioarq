@@ -7,7 +7,7 @@
     <meta name="description" content="Portfolio de Arquitectura y Gestión BIM. Nicolás Siderides.">
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- IMPORTANTE: Librería Model Viewer para cargar el GLB -->
+    <!-- IMPORTANTE: Librería Model Viewer (Se mantiene por si decides usar GLB en el futuro) -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
     
     <!-- Fuentes: Space Grotesk (Títulos Modernos) y JetBrains Mono (Datos Técnicos) -->
@@ -185,6 +185,7 @@
             <div class="md:col-span-4 lg:col-span-3 flex flex-col justify-center items-center h-full order-1 mt-12 md:mt-0 border-r border-line pr-12">
                 <div class="w-full max-w-[280px]">
                     <div class="w-full aspect-square overflow-hidden grayscale mb-8 flex justify-center items-center shadow-sm">
+                        <!-- Foto de Perfil (Placeholder, idealmente reemplazar con foto real si se tiene) -->
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop" class="w-full h-full object-cover filter contrast-125">
                     </div>
                     <div class="space-y-4 font-mono text-[10px] uppercase tracking-wider text-ink/80 text-left">
@@ -479,76 +480,77 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 border-t border-line">
             
-            <!-- Cards 1-10 (Mantienen links externos) -->
+            <!-- PROYECTOS DESTACADOS (TOP 6) -->
+
             <!-- CARD 01 -->
             <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
                 <div class="p-6 pb-0">
-                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>01 / Salud</span><span>[ Modular ]</span></div>
+                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>01 / Industrial</span><span>[ Comedor ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="https://images.unsplash.com/photo-1587329310686-947543556a1b?q=80&w=2071&auto=format&fit=crop" class="project-img w-full h-full object-cover">
+                        <img src="assets/optimizadas/Comedor.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
-                    <h3 class="font-display text-xl mb-2 leading-tight">Hosp. Turístico</h3>
-                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">UNOPS / Monte Hermoso</p>
+                    <h3 class="font-display text-xl mb-2 leading-tight">Comedor Techint II</h3>
+                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">Techint / Añelo</p>
                     <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
-                        Modelado BIM ARQ MEP. Instalaciones sanitarias, agua fría, agua caliente. Documentación para fabricación por estaciones.
+                        Diseño y coordinación para infraestructura de servicios en campamento. Espacios de gran escala modular.
                     </p>
                 </div>
                 <div class="px-6 pb-6">
-                    <button onclick="handleProjectClick('https://autode.sk/3WIN2CC')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
+                    <button onclick="handleProjectClick('https://autode.sk/44aENu8')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
                 </div>
             </article>
 
             <!-- CARD 02 -->
             <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
                 <div class="p-6 pb-0">
-                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>02 / Salud</span><span>[ Modular ]</span></div>
+                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>02 / Salud</span><span>[ CAPS ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                         <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop" class="project-img w-full h-full object-cover">
+                         <img src="assets/optimizadas/San Jeronimo.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
-                    <h3 class="font-display text-xl mb-2 leading-tight">Hosp. Turístico</h3>
-                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">UNOPS / Mina Clavero</p>
+                    <h3 class="font-display text-xl mb-2 leading-tight">CAP San Jerónimo</h3>
+                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">UNOPS / Santa Fe</p>
                     <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
-                         Modelado BIM ARQ MEP. Instalaciones sanitarias, agua fría, agua caliente. Documentación para fabricación por estaciones.
+                         Centro de Atención Primaria modularizado. Coordinación de instalaciones sanitarias y eléctricas para salud pública.
                     </p>
                 </div>
                 <div class="px-6 pb-6">
-                    <button onclick="handleProjectClick('https://autode.sk/3WIN2CC')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
+                    <button onclick="handleProjectClick('https://autode.sk/4ibQo1G')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
                 </div>
             </article>
 
             <!-- CARD 03 -->
              <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
                 <div class="p-6 pb-0">
-                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>03 / Salud</span><span>[ Modular ]</span></div>
+                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>03 / Residencial</span><span>[ Habitacional ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                         <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop" class="project-img w-full h-full object-cover">
+                         <img src="assets/optimizadas/Cuarzo complejo.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
-                    <h3 class="font-display text-xl mb-2 leading-tight">Hosp. Turístico</h3>
-                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">UNOPS / San Bernardo</p>
+                    <h3 class="font-display text-xl mb-2 leading-tight">Complejo Cuarzo I</h3>
+                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">Everhouse / Neuquén</p>
                     <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
-                         Modelado BIM ARQ MEP. Instalaciones sanitarias, agua fría, agua caliente. Documentación para fabricación por estaciones.
+                         Complejo habitacional desarrollado en Steel Frame. Documentación técnica y modelado de detalle.
                     </p>
                 </div>
                 <div class="px-6 pb-6">
-                    <button onclick="handleProjectClick('https://autode.sk/3WIN2CC')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
+                    <button onclick="handleProjectClick('https://autode.sk/4o7lOro')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
                 </div>
             </article>
 
             <!-- CARD 04 -->
              <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
                 <div class="p-6 pb-0">
-                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>04 / Salud</span><span>[ Modular ]</span></div>
+                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>04 / Salud</span><span>[ MEP ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                         <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1974&auto=format&fit=crop" class="project-img w-full h-full object-cover">
+                         <img src="assets/optimizadas/Tafi.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
-                    <h3 class="font-display text-xl mb-2 leading-tight">Hosp. Turístico</h3>
-                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">UNOPS / Villa Gesell</p>
+                    <h3 class="font-display text-xl mb-2 leading-tight">Hospital Tafí Viejo</h3>
+                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">SIPROSA / Tucumán</p>
                     <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
-                         Modelado BIM ARQ MEP. Instalaciones sanitarias, agua fría, agua caliente. Documentación para fabricación por estaciones.
+                         Modelado avanzado de instalaciones MEP para Centro de Aislamiento Sanitario. Detección de interferencias.
                     </p>
                 </div>
                 <div class="px-6 pb-6">
-                    <button onclick="handleProjectClick('https://autode.sk/3WIN2CC')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
+                    <button onclick="handleProjectClick('https://autode.sk/47x9Ke5')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
                 </div>
             </article>
 
@@ -557,84 +559,30 @@
                 <div class="p-6 pb-0">
                     <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>05 / Salud</span><span>[ Modular ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?q=80&w=2074&auto=format&fit=crop" class="project-img w-full h-full object-cover">
+                        <img src="assets/optimizadas/Centro sanitario modular.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
-                    <h3 class="font-display text-xl mb-2 leading-tight">Hosp. Turístico</h3>
-                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">UNOPS / Necochea</p>
+                    <h3 class="font-display text-xl mb-2 leading-tight">Centros Sanitarios</h3>
+                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">Nación / Federal</p>
                     <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
-                         Modelado BIM ARQ MEP. Instalaciones sanitarias, agua fría, agua caliente. Documentación para fabricación por estaciones.
+                         Despliegue de tipologías sanitarias modulares en puntos turísticos. Estandarización de procesos.
                     </p>
                 </div>
                 <div class="px-6 pb-6">
-                    <button onclick="handleProjectClick('https://autode.sk/3WIN2CC')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
+                    <button onclick="handleProjectClick('https://autode.sk/4qwBrLI')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
                 </div>
             </article>
 
             <!-- CARD 06 -->
              <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
                 <div class="p-6 pb-0">
-                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>06 / Penitenciario</span><span>[ Seguridad ]</span></div>
+                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>06 / Industrial</span><span>[ Campamento ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop" class="project-img w-full h-full object-cover">
+                        <img src="assets/optimizadas/Techint 1.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
-                    <h3 class="font-display text-xl mb-2 leading-tight">Complejo Penitenciario</h3>
-                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">Serv. Penitenciario / Salta</p>
+                    <h3 class="font-display text-xl mb-2 leading-tight">Campamento Techint I</h3>
+                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">Techint / Vaca Muerta</p>
                     <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
-                        Modelado BIM ARQ MEP de módulos de alta seguridad. Verificación de cómputos métricos in-situ.
-                    </p>
-                </div>
-                <div class="px-6 pb-6">
-                    <button onclick="handleProjectClick('https://autode.sk/4omEKmx')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
-                </div>
-            </article>
-
-            <!-- CARD 07 -->
-             <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
-                <div class="p-6 pb-0">
-                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>07 / Minería</span><span>[ Campamento ]</span></div>
-                    <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" class="project-img w-full h-full object-cover">
-                    </div>
-                    <h3 class="font-display text-xl mb-2 leading-tight">Campamento Minero</h3>
-                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">Galaxy Lithium / Catamarca</p>
-                    <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
-                        Coordinación BIM para campamento en la Puna (4000 msnm). Gestión logística de 110 módulos.
-                    </p>
-                </div>
-                <div class="px-6 pb-6">
-                    <button onclick="handleProjectClick('https://autode.sk/479NwNK')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
-                </div>
-            </article>
-
-            <!-- CARD 08 -->
-             <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
-                <div class="p-6 pb-0">
-                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>08 / Salud</span><span>[ MEP ]</span></div>
-                    <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="https://images.unsplash.com/photo-1538100806443-4dc975d045c7?q=80&w=2070&auto=format&fit=crop" class="project-img w-full h-full object-cover">
-                    </div>
-                    <h3 class="font-display text-xl mb-2 leading-tight">Hosp. Tafí Viejo</h3>
-                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">Salud Pública / Tucumán</p>
-                    <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
-                        Modelado MEP avanzado (LOD 400) para prefabricación de racks sanitarios. Detección de interferencias.
-                    </p>
-                </div>
-                <div class="px-6 pb-6">
-                    <button onclick="handleProjectClick('https://autode.sk/47x9Ke5')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
-                </div>
-            </article>
-
-            <!-- CARD 09 -->
-             <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
-                <div class="p-6 pb-0">
-                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>09 / Industrial</span><span>[ Producción ]</span></div>
-                    <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?q=80&w=2070&auto=format&fit=crop" class="project-img w-full h-full object-cover">
-                    </div>
-                    <h3 class="font-display text-xl mb-2 leading-tight">Campamento Techint</h3>
-                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">Techint / Santa Cruz</p>
-                    <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
-                        Planificación de producción para despliegue masivo de 346 módulos. Sistematización de 9 tipologías.
+                        Coordinación logística y de montaje para campamento minero/petrolero de gran escala.
                     </p>
                 </div>
                 <div class="px-6 pb-6">
@@ -642,17 +590,73 @@
                 </div>
             </article>
 
+            <!-- GALERÍA / ARCHIVO -->
+
+            <!-- CARD 07 -->
+             <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
+                <div class="p-6 pb-0">
+                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>07 / Salud</span><span>[ Ampliación ]</span></div>
+                    <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
+                        <img src="assets/optimizadas/Rawson.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                    </div>
+                    <h3 class="font-display text-xl mb-2 leading-tight">Hospital Rawson</h3>
+                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">Córdoba / Capital</p>
+                    <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
+                        Proyecto de ampliación modular para respuesta a emergencia sanitaria.
+                    </p>
+                </div>
+                <div class="px-6 pb-6">
+                    <button onclick="handleProjectClick('https://autode.sk/4oSNOAx')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
+                </div>
+            </article>
+
+            <!-- CARD 08 -->
+             <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
+                <div class="p-6 pb-0">
+                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>08 / Minería</span><span>[ Habitacional ]</span></div>
+                    <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
+                        <img src="assets/optimizadas/Galaxy.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                    </div>
+                    <h3 class="font-display text-xl mb-2 leading-tight">Módulos Galaxy</h3>
+                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">Galaxy Lithium / Catamarca</p>
+                    <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
+                        Desarrollo de 110 unidades habitacionales para campamento en altura (Puna).
+                    </p>
+                </div>
+                <div class="px-6 pb-6">
+                    <button onclick="handleProjectClick('https://autode.sk/479NwNK')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
+                </div>
+            </article>
+
+            <!-- CARD 09 -->
+             <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
+                <div class="p-6 pb-0">
+                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>09 / Industrial</span><span>[ Prototipo ]</span></div>
+                    <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
+                        <img src="assets/optimizadas/Manfield.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                    </div>
+                    <h3 class="font-display text-xl mb-2 leading-tight">Prototipo Manfield</h3>
+                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">Minería / Salta</p>
+                    <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
+                        Diseño técnico de módulo habitacional de alta resistencia para condiciones extremas.
+                    </p>
+                </div>
+                <div class="px-6 pb-6">
+                    <button onclick="handleProjectClick('https://autode.sk/43yj92R')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
+                </div>
+            </article>
+
             <!-- CARD 10 -->
              <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
                 <div class="p-6 pb-0">
-                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>10 / Residencial</span><span>[ Steel Frame ]</span></div>
+                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>10 / Residencial</span><span>[ Tipología ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=2069&auto=format&fit=crop" class="project-img w-full h-full object-cover">
+                        <img src="assets/optimizadas/Cuarzo depto.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
-                    <h3 class="font-display text-xl mb-2 leading-tight">Complejo Cuarzo</h3>
+                    <h3 class="font-display text-xl mb-2 leading-tight">Cuarzo I – Depto</h3>
                     <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">Everhouse / Neuquén</p>
                     <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
-                        Diseño de instalaciones en paneles de Steel Frame. Coordinación estructural.
+                        Detalle constructivo de unidad funcional tipo para complejo residencial.
                     </p>
                 </div>
                 <div class="px-6 pb-6">
@@ -660,42 +664,35 @@
                 </div>
             </article>
 
-            <!-- CARD 11 - ESTE ES EL ESPECIAL (ESCOBAR) -->
+            <!-- CARD 11 -->
             <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
                 <div class="p-6 pb-0">
-                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim">
-                        <span>11 / Seguridad</span>
-                        <span>[ Modular ]</span>
-                    </div>
+                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>11 / Corporativo</span><span>[ Oficinas ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="https://images.unsplash.com/photo-1590247813693-5541d1c609fd?q=80&w=2009&auto=format&fit=crop" class="project-img w-full h-full object-cover">
+                        <img src="assets/optimizadas/Syngenta.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
-                    <h3 class="font-display text-xl mb-2 leading-tight">Destacamento Policial</h3>
-                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">Munic. Escobar / Bs.As.</p>
+                    <h3 class="font-display text-xl mb-2 leading-tight">Predio Syngenta</h3>
+                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">Syngenta / Buenos Aires</p>
                     <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
-                        Documentación técnica para montaje en línea. Modelado detallado de instalaciones eléctricas para módulos blindados.
+                        Infraestructura modular corporativa y de servicios para predio industrial.
                     </p>
                 </div>
                 <div class="px-6 pb-6">
-                    <!-- AQUÍ ESTÁ EL CAMBIO: Apunta a 'Escobar.glb' -->
-                    <button onclick="handleProjectClick('./Escobar.glb')" class="block w-full border border-ink bg-ink text-white py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-accent hover:border-accent transition-all cursor-pointer relative overflow-hidden">
-                        <span class="relative z-10 flex items-center justify-center gap-2"><i class="fas fa-cube"></i> Ver Modelo Interactivo</span>
-                    </button>
+                    <button onclick="handleProjectClick('https://autode.sk/4rkhPuL')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
                 </div>
             </article>
 
-            <!-- Resto de Cards (12-20) Link externo -->
             <!-- CARD 12 -->
              <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
                 <div class="p-6 pb-0">
-                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>12 / Salud</span><span>[ Logística ]</span></div>
+                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>12 / Salud</span><span>[ Urbana ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                         <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop" class="project-img w-full h-full object-cover">
+                         <img src="assets/optimizadas/SISU.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
-                    <h3 class="font-display text-xl mb-2 leading-tight">CAP San Jerónimo</h3>
-                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">UNOPS / Santa Fe</p>
+                    <h3 class="font-display text-xl mb-2 leading-tight">Módulos SISU</h3>
+                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">Integración Urbana / PBA</p>
                     <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
-                        Manuales de montaje para operarios. Coordinación logística de módulos sanitarios.
+                        Módulos sanitarios de rápida implementación para barrios populares.
                     </p>
                 </div>
                 <div class="px-6 pb-6">
@@ -706,9 +703,135 @@
             <!-- CARD 13 -->
              <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
                 <div class="p-6 pb-0">
-                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>13 / Comercial</span><span>[ Branding ]</span></div>
+                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>13 / Técnico</span><span>[ Telecom ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                         <img src="https://images.unsplash.com/photo-1595327656903-2f54e37ce09b?q=80&w=1935&auto=format&fit=crop" class="project-img w-full h-full object-cover">
+                         <img src="assets/optimizadas/Shelter.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                    </div>
+                    <h3 class="font-display text-xl mb-2 leading-tight">Módulos Shelter</h3>
+                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">Infraestructura / Datos</p>
+                    <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
+                        Cámaras técnicas blindadas para equipos de telecomunicaciones.
+                    </p>
+                </div>
+                <div class="px-6 pb-6">
+                    <button onclick="handleProjectClick('https://autode.sk/4qZH5Ga')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
+                </div>
+            </article>
+
+            <!-- CARD 14 -->
+             <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
+                <div class="p-6 pb-0">
+                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>14 / Salud</span><span>[ Turismo ]</span></div>
+                    <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
+                         <img src="assets/optimizadas/Turistico.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                    </div>
+                    <h3 class="font-display text-xl mb-2 leading-tight">Hospitales Turísticos</h3>
+                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">Red Federal / Argentina</p>
+                    <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
+                        Centros de salud modulares distribuidos en los principales puntos turísticos del país.
+                    </p>
+                </div>
+                <div class="px-6 pb-6">
+                    <button onclick="handleProjectClick('https://autode.sk/4qtRnOu')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
+                </div>
+            </article>
+
+            <!-- CARD 15 -->
+             <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
+                <div class="p-6 pb-0">
+                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>15 / Seguridad</span><span>[ Penitenciario ]</span></div>
+                    <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
+                         <img src="assets/optimizadas/Penitenciario.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                    </div>
+                    <h3 class="font-display text-xl mb-2 leading-tight">Hosp. Penitenciario</h3>
+                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">Justicia / Federal</p>
+                    <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
+                        Unidades sanitarias de alta seguridad para complejos penitenciarios.
+                    </p>
+                </div>
+                <div class="px-6 pb-6">
+                    <button onclick="handleProjectClick('https://autode.sk/4omEKmx')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
+                </div>
+            </article>
+
+            <!-- CARD 16 -->
+             <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
+                <div class="p-6 pb-0">
+                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>16 / Seguridad</span><span>[ Detención ]</span></div>
+                    <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
+                         <img src="assets/optimizadas/Celda.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                    </div>
+                    <h3 class="font-display text-xl mb-2 leading-tight">Módulo Celda</h3>
+                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">Seguridad / Prototipo</p>
+                    <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
+                        Diseño de módulo de detención individual bajo normas internacionales de seguridad.
+                    </p>
+                </div>
+                <div class="px-6 pb-6">
+                    <button onclick="handleProjectClick('https://autode.sk/4icE6Gv')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
+                </div>
+            </article>
+
+            <!-- CARD 17 -->
+             <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
+                <div class="p-6 pb-0">
+                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>17 / Industrial</span><span>[ Oficinas ]</span></div>
+                    <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
+                        <img src="assets/optimizadas/Oficina.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                    </div>
+                    <h3 class="font-display text-xl mb-2 leading-tight">Camp Techint II</h3>
+                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">Techint / Añelo</p>
+                    <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
+                        Sector administrativo y de oficinas técnicas para campamento base.
+                    </p>
+                </div>
+                <div class="px-6 pb-6">
+                    <button onclick="handleProjectClick('https://autode.sk/3LXuV0t')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
+                </div>
+            </article>
+
+            <!-- CARD 18 -->
+             <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
+                <div class="p-6 pb-0">
+                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>18 / Industrial</span><span>[ Recreación ]</span></div>
+                    <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
+                        <img src="assets/optimizadas/Recreacion.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                    </div>
+                    <h3 class="font-display text-xl mb-2 leading-tight">Camp Techint II</h3>
+                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">Techint / Añelo</p>
+                    <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
+                        Sector recreativo y de esparcimiento para personal de obra.
+                    </p>
+                </div>
+                <div class="px-6 pb-6">
+                    <button onclick="handleProjectClick('https://autode.sk/4o68P9m')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
+                </div>
+            </article>
+
+            <!-- CARD 19 -->
+             <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
+                <div class="p-6 pb-0">
+                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>19 / Seguridad</span><span>[ Modular ]</span></div>
+                    <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
+                        <img src="assets/optimizadas/Destacamento escobar.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                    </div>
+                    <h3 class="font-display text-xl mb-2 leading-tight">Destacamento Escobar</h3>
+                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">Munic. Escobar / Bs.As.</p>
+                    <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
+                        Documentación técnica para montaje en línea. Instalaciones para módulos blindados.
+                    </p>
+                </div>
+                <div class="px-6 pb-6">
+                    <button onclick="handleProjectClick('https://autode.sk/483pftm')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
+                </div>
+            </article>
+
+            <!-- CARD 20 -->
+             <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
+                <div class="p-6 pb-0">
+                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>20 / Comercial</span><span>[ Branding ]</span></div>
+                    <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
+                        <img src="assets/optimizadas/Shell.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
                     <h3 class="font-display text-xl mb-2 leading-tight">Prototipo Shop Shell</h3>
                     <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">Shell / Córdoba</p>
@@ -717,133 +840,7 @@
                     </p>
                 </div>
                 <div class="px-6 pb-6">
-                    <button onclick="handleProjectClick('https://autode.sk/4qtRnOu')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
-                </div>
-            </article>
-
-            <!-- CARD 14 -->
-             <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
-                <div class="p-6 pb-0">
-                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>14 / Salud</span><span>[ Emergencia ]</span></div>
-                    <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                         <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop" class="project-img w-full h-full object-cover">
-                    </div>
-                    <h3 class="font-display text-xl mb-2 leading-tight">Hosp. Modular</h3>
-                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">UNOPS / Lomas de Zamora</p>
-                    <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
-                        Ejecución rápida de infraestructura sanitaria. Control de interferencias para gases medicinales.
-                    </p>
-                </div>
-                <div class="px-6 pb-6">
-                    <button onclick="handleProjectClick('https://autode.sk/3WIN2CC')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
-                </div>
-            </article>
-
-            <!-- CARD 15 -->
-             <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
-                <div class="p-6 pb-0">
-                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>15 / Salud</span><span>[ Modular ]</span></div>
-                    <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                         <img src="https://images.unsplash.com/photo-1512403754473-27835f7b9984?q=80&w=2030&auto=format&fit=crop" class="project-img w-full h-full object-cover">
-                    </div>
-                    <h3 class="font-display text-xl mb-2 leading-tight">Hosp. Modular</h3>
-                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">UNOPS / Mar del Plata</p>
-                    <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
-                        Coordinación de montaje en zona costera. Adaptación estructural para condiciones climáticas.
-                    </p>
-                </div>
-                <div class="px-6 pb-6">
-                    <button onclick="handleProjectClick('https://autode.sk/3WIN2CC')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
-                </div>
-            </article>
-
-            <!-- CARD 16 -->
-             <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
-                <div class="p-6 pb-0">
-                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>16 / Salud</span><span>[ Modular ]</span></div>
-                    <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                         <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=2070&auto=format&fit=crop" class="project-img w-full h-full object-cover">
-                    </div>
-                    <h3 class="font-display text-xl mb-2 leading-tight">Hosp. Modular</h3>
-                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">UNOPS / Caleta Olivia</p>
-                    <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
-                        Despliegue logístico en Patagonia. Gestión de transporte y montaje de módulos.
-                    </p>
-                </div>
-                <div class="px-6 pb-6">
-                    <button onclick="handleProjectClick('https://autode.sk/3WIN2CC')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
-                </div>
-            </article>
-
-            <!-- CARD 17 -->
-             <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
-                <div class="p-6 pb-0">
-                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>17 / Salud</span><span>[ Emergencia ]</span></div>
-                    <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="https://images.unsplash.com/photo-1516937941348-c09645f31e88?q=80&w=2070&auto=format&fit=crop" class="project-img w-full h-full object-cover">
-                    </div>
-                    <h3 class="font-display text-xl mb-2 leading-tight">Hosp. Modular</h3>
-                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">UNOPS / Florencio Varela</p>
-                    <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
-                        Coordinación integral de instalaciones MEP en tiempo récord para respuesta sanitaria.
-                    </p>
-                </div>
-                <div class="px-6 pb-6">
-                    <button onclick="handleProjectClick('https://autode.sk/3WIN2CC')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
-                </div>
-            </article>
-
-            <!-- CARD 18 -->
-             <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
-                <div class="p-6 pb-0">
-                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>18 / Salud</span><span>[ Modular ]</span></div>
-                    <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="https://images.unsplash.com/photo-1519494080410-f9aa01caa54b?q=80&w=2053&auto=format&fit=crop" class="project-img w-full h-full object-cover">
-                    </div>
-                    <h3 class="font-display text-xl mb-2 leading-tight">Hosp. Modular</h3>
-                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">UNOPS / Quilmes</p>
-                    <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
-                        Supervisión de montaje y conexión a redes de infraestructura urbana existentes.
-                    </p>
-                </div>
-                <div class="px-6 pb-6">
-                    <button onclick="handleProjectClick('https://autode.sk/3WIN2CC')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
-                </div>
-            </article>
-
-            <!-- CARD 19 -->
-             <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
-                <div class="p-6 pb-0">
-                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>19 / Salud</span><span>[ Modular ]</span></div>
-                    <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=2070&auto=format&fit=crop" class="project-img w-full h-full object-cover">
-                    </div>
-                    <h3 class="font-display text-xl mb-2 leading-tight">Hosp. Modular</h3>
-                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">UNOPS / Resistencia</p>
-                    <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
-                        Adaptación de fundaciones y estructuras para suelo chaqueño. Logística de largo alcance.
-                    </p>
-                </div>
-                <div class="px-6 pb-6">
-                    <button onclick="handleProjectClick('https://autode.sk/3WIN2CC')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
-                </div>
-            </article>
-
-            <!-- CARD 20 -->
-             <article class="group border-r border-b border-line bg-bg-main hover:bg-white transition-colors duration-500 relative flex flex-col justify-between h-full">
-                <div class="p-6 pb-0">
-                    <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>20 / Salud</span><span>[ Modular ]</span></div>
-                    <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="https://images.unsplash.com/photo-1470723710355-95304d8aece4?q=80&w=2070&auto=format&fit=crop" class="project-img w-full h-full object-cover">
-                    </div>
-                    <h3 class="font-display text-xl mb-2 leading-tight">Hosp. Modular</h3>
-                    <p class="font-mono text-[9px] text-dim mb-3 uppercase tracking-widest">UNOPS / Bariloche</p>
-                    <p class="font-sans text-[11px] leading-relaxed text-ink/80 text-justify mb-4 h-16 overflow-hidden">
-                        Soluciones de aislación térmica reforzada para clima de montaña. Montaje en condiciones de nieve.
-                    </p>
-                </div>
-                <div class="px-6 pb-6">
-                    <button onclick="handleProjectClick('https://autode.sk/3WIN2CC')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
+                    <button onclick="handleProjectClick('https://autode.sk/4o68L9C')" class="block w-full border border-ink py-2 text-center font-mono text-[9px] uppercase tracking-widest hover:bg-ink hover:text-white transition-all cursor-pointer">Ver Modelo 3D</button>
                 </div>
             </article>
 
@@ -874,7 +871,7 @@
         </div>
     </footer>
 
-    <!-- MODAL VIEWER (GOOGLE MODEL VIEWER) -->
+    <!-- MODAL VIEWER (GOOGLE MODEL VIEWER) - Hidden by default, used for GLB files -->
     <div id="viewerModal" class="fixed inset-0 z-[100] bg-ink/95 backdrop-blur-md hidden flex items-center justify-center opacity-0 transition-opacity duration-300">
         <div class="w-[90vw] h-[80vh] bg-black relative border border-white/20 shadow-2xl">
             <!-- Header del Modal -->
@@ -891,8 +888,7 @@
             <div id="errorMessage" class="absolute inset-0 flex items-center justify-center pointer-events-none hidden z-50">
                 <div class="bg-red-500/10 border border-red-500 text-red-500 p-6 max-w-md text-center backdrop-blur-sm">
                     <p class="font-mono text-sm uppercase tracking-widest mb-2 font-bold">Error de Carga</p>
-                    <p class="font-sans text-xs opacity-80 mb-4">No se pudo cargar el archivo local "Escobar.glb".</p>
-                    <p class="font-mono text-[10px] opacity-60">Para que funcione en tu PC, asegúrate de que el archivo .html y .glb estén en la misma carpeta y ábrelos con un servidor local (Live Server).</p>
+                    <p class="font-sans text-xs opacity-80 mb-4">No se pudo cargar el archivo local.</p>
                 </div>
             </div>
 
@@ -909,7 +905,7 @@
                 environment-image="neutral"
                 exposure="1"
                 class="w-full h-full bg-[#111]"
-                orientation="0deg 0deg 180deg"
+                orientation="-90deg 0deg 0deg"
             >
                 <div class="progress-bar hide" slot="progress-bar">
                     <div class="update-bar"></div>
