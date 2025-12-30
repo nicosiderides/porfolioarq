@@ -114,25 +114,41 @@
             transition: width 0.2s, height 0.2s, background-color 0.2s;
         }
 
-        /* --- EFECTO B&W a COLOR --- */
-        .project-img-container {
+        /* --- EFECTO B&W a COLOR (CORREGIDO Y UNIFICADO) --- */
+        .project-img-container, 
+        .profile-img-container {
             overflow: hidden;
             position: relative;
+            /* Fix para Safari/Chrome rendering */
+            transform: translateZ(0);
         }
-        .project-img-container::after {
+        
+        /* Capa sutil sobre la imagen */
+        .project-img-container::after,
+        .profile-img-container::after {
             content: '';
             position: absolute;
             inset: 0;
             background: rgba(0,0,0,0.02);
             transition: opacity 0.3s;
+            pointer-events: none;
         }
-        .project-img {
+
+        /* Clase unificada para el efecto de imagen */
+        .img-bw-effect {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Estado inicial: Blanco y Negro */
+            filter: grayscale(100%) contrast(1.1); 
             transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1), filter 0.5s ease;
-            filter: grayscale(100%); /* Comienza en Blanco y Negro */
+            will-change: transform, filter;
         }
-        .group:hover .project-img {
-            transform: scale(1.03);
-            filter: grayscale(0%); /* Pasa a Color al hacer hover */
+
+        /* Al hacer hover en el contenedor padre (.group), activar color y zoom */
+        .group:hover .img-bw-effect {
+            filter: grayscale(0%) contrast(1); /* Color original */
+            transform: scale(1.05); /* Zoom sutil */
         }
 
         /* Estilos Model Viewer */
@@ -183,9 +199,11 @@
             <!-- Columna Izquierda -->
             <div class="md:col-span-4 lg:col-span-3 flex flex-col justify-center items-center h-full order-1 mt-12 md:mt-0 border-r border-line pr-12">
                 <div class="w-full max-w-[280px]">
-                    <div class="w-full aspect-square overflow-hidden grayscale mb-8 flex justify-center items-center shadow-sm">
-                        <img src="assets/optimizadas/Foto perfil.webp" class="w-full h-full object-cover filter contrast-125" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                    <!-- FOTO DE PERFIL: Agregada clase 'group' y 'img-bw-effect' -->
+                    <div class="profile-img-container w-full aspect-square overflow-hidden mb-8 flex justify-center items-center shadow-sm group bg-line/10">
+                        <img src="assets/optimizadas/Foto perfil.webp" class="img-bw-effect" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
+                    
                     <div class="space-y-4 font-mono text-[10px] uppercase tracking-wider text-ink/80 text-left">
                         <div class="flex justify-between border-b border-line pb-1">
                             <span class="text-dim">Edad</span>
@@ -483,7 +501,7 @@
                 <div class="p-6 pb-0">
                     <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>01 / Salud</span><span>[ Turismo ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="assets/optimizadas/Turistico.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                        <img src="assets/optimizadas/Turistico.webp" class="img-bw-effect" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
                     <h3 class="font-display text-xl mb-1 leading-tight">Hospitales turísticos</h3>
                     
@@ -510,7 +528,7 @@
                 <div class="p-6 pb-0">
                     <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>02 / Salud</span><span>[ Modular ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                         <img src="assets/optimizadas/Centro sanitario modular.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                         <img src="assets/optimizadas/Centro sanitario modular.webp" class="img-bw-effect" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
                     <h3 class="font-display text-xl mb-1 leading-tight">Centros sanitarios <span class="text-dim text-sm ml-1">(3 Un)</span></h3>
                     
@@ -537,7 +555,7 @@
                 <div class="p-6 pb-0">
                     <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>03 / Seguridad</span><span>[ Penitenciario ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                         <img src="assets/optimizadas/Penitenciario.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                         <img src="assets/optimizadas/Penitenciario.webp" class="img-bw-effect" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
                     <h3 class="font-display text-xl mb-1 leading-tight">Hospital penitenciario</h3>
                     
@@ -564,7 +582,7 @@
                 <div class="p-6 pb-0">
                     <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>04 / Minería</span><span>[ Habitacional ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                         <img src="assets/optimizadas/Galaxy.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                         <img src="assets/optimizadas/Galaxy.webp" class="img-bw-effect" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
                     <h3 class="font-display text-xl mb-1 leading-tight">Módulos Galaxy <span class="text-dim text-sm ml-1">(110 Un)</span></h3>
                     
@@ -591,7 +609,7 @@
                 <div class="p-6 pb-0">
                     <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>05 / Salud</span><span>[ MEP ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                         <img src="assets/optimizadas/Tafi.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                         <img src="assets/optimizadas/Tafi.webp" class="img-bw-effect" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
                     <h3 class="font-display text-xl mb-1 leading-tight">Hospital Tafí Viejo CAS</h3>
                     
@@ -618,7 +636,7 @@
                 <div class="p-6 pb-0">
                     <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>06 / Técnico</span><span>[ Telecom ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                         <img src="assets/optimizadas/Shelter.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                         <img src="assets/optimizadas/Shelter.webp" class="img-bw-effect" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
                     <h3 class="font-display text-xl mb-1 leading-tight">Módulos Shelter <span class="text-dim text-sm ml-1">(3 Un)</span></h3>
                     
@@ -645,7 +663,7 @@
                 <div class="p-6 pb-0">
                     <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>07 / Industrial</span><span>[ Campamento ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="assets/optimizadas/Techint 1.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                        <img src="assets/optimizadas/Techint 1.webp" class="img-bw-effect" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
                     <h3 class="font-display text-xl mb-1 leading-tight">Camp. Techint I <span class="text-dim text-sm ml-1">(346 Un)</span></h3>
                     
@@ -672,7 +690,7 @@
                 <div class="p-6 pb-0">
                     <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>08 / Salud</span><span>[ Urbana ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                         <img src="assets/optimizadas/SISU.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                         <img src="assets/optimizadas/SISU.webp" class="img-bw-effect" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
                     <h3 class="font-display text-xl mb-1 leading-tight">Módulos Sanitarios SISU 2 <span class="text-dim text-sm ml-1">(2 Un)</span></h3>
                     
@@ -699,7 +717,7 @@
                 <div class="p-6 pb-0">
                     <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>09 / Residencial</span><span>[ Tipología ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="assets/optimizadas/Cuarzo depto.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                        <img src="assets/optimizadas/Cuarzo depto.webp" class="img-bw-effect" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
                     <h3 class="font-display text-xl mb-1 leading-tight">Cuarzo I - Depto Tipo</h3>
                     
@@ -726,7 +744,7 @@
                 <div class="p-6 pb-0">
                     <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>10 / Corporativo</span><span>[ Licitación ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="assets/optimizadas/Syngenta.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                        <img src="assets/optimizadas/Syngenta.webp" class="img-bw-effect" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
                     <h3 class="font-display text-xl mb-1 leading-tight">Predio Syngenta</h3>
                     
@@ -753,7 +771,7 @@
                 <div class="p-6 pb-0">
                     <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>11 / Industrial</span><span>[ Prototipo ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="assets/optimizadas/Manfield.webp" class="project-img w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                        <img src="assets/optimizadas/Manfield.webp" class="img-bw-effect" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
                     <h3 class="font-display text-xl mb-1 leading-tight">Prototipo Manfield <span class="text-dim text-sm ml-1">(38 Un)</span></h3>
                     
@@ -780,7 +798,7 @@
                 <div class="p-6 pb-0">
                     <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>12 / Seguridad</span><span>[ Prototipo ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="assets/optimizadas/Celda.webp" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                        <img src="assets/optimizadas/Celda.webp" class="img-bw-effect" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
                     <h3 class="font-display text-xl mb-1 leading-tight">Prototipo Módulo Celda</h3>
                     
@@ -807,7 +825,7 @@
                 <div class="p-6 pb-0">
                     <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>13 / Industrial</span><span>[ Comedor ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="assets/optimizadas/Comedor.webp" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                        <img src="assets/optimizadas/Comedor.webp" class="img-bw-effect" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
                     <h3 class="font-display text-xl mb-1 leading-tight">Camp. Techint II - Comedor <span class="text-dim text-sm ml-1">(2 Un)</span></h3>
                     
@@ -834,7 +852,7 @@
                 <div class="p-6 pb-0">
                     <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>14 / Industrial</span><span>[ Oficinas ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="assets/optimizadas/Oficina.webp" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                        <img src="assets/optimizadas/Oficina.webp" class="img-bw-effect" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
                     <h3 class="font-display text-xl mb-1 leading-tight">Camp. Techint II - Oficinas <span class="text-dim text-sm ml-1">(2 Un)</span></h3>
                     
@@ -861,7 +879,7 @@
                 <div class="p-6 pb-0">
                     <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>15 / Industrial</span><span>[ Recreación ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="assets/optimizadas/Recreacion.webp" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                        <img src="assets/optimizadas/Recreacion.webp" class="img-bw-effect" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
                     <h3 class="font-display text-xl mb-1 leading-tight">Camp. Techint II - Recreación <span class="text-dim text-sm ml-1">(2 Un)</span></h3>
                     
@@ -888,7 +906,7 @@
                 <div class="p-6 pb-0">
                     <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>16 / Salud</span><span>[ Ampliación ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="assets/optimizadas/Rawson.webp" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                        <img src="assets/optimizadas/Rawson.webp" class="img-bw-effect" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
                     <h3 class="font-display text-xl mb-1 leading-tight">Ampliación Hospital Rawson</h3>
                     
@@ -915,7 +933,7 @@
                 <div class="p-6 pb-0">
                     <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>17 / Seguridad</span><span>[ Modular ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="assets/optimizadas/Destacamento escobar.webp" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                        <img src="assets/optimizadas/Destacamento escobar.webp" class="img-bw-effect" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
                     <h3 class="font-display text-xl mb-1 leading-tight">Destacamento Escobar</h3>
                     
@@ -942,7 +960,7 @@
                 <div class="p-6 pb-0">
                     <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>18 / Residencial</span><span>[ Complejo ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="assets/optimizadas/Cuarzo complejo.webp" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                        <img src="assets/optimizadas/Cuarzo complejo.webp" class="img-bw-effect" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
                     <h3 class="font-display text-xl mb-1 leading-tight">CUARZO I - Complejo</h3>
                     
@@ -969,7 +987,7 @@
                 <div class="p-6 pb-0">
                     <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>19 / Salud</span><span>[ CAPS ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="assets/optimizadas/San Jeronimo.webp" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                        <img src="assets/optimizadas/San Jeronimo.webp" class="img-bw-effect" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
                     <h3 class="font-display text-xl mb-1 leading-tight">Centro Atención Primaria</h3>
                     
@@ -996,7 +1014,7 @@
                 <div class="p-6 pb-0">
                     <div class="flex justify-between items-start mb-4 font-mono text-[9px] uppercase tracking-widest text-dim"><span>20 / Comercial</span><span>[ Branding ]</span></div>
                     <div class="project-img-container aspect-[4/3] w-full bg-line/20 mb-4 border border-line">
-                        <img src="assets/optimizadas/Shell.webp" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
+                        <img src="assets/optimizadas/Shell.webp" class="img-bw-effect" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#ccc';">
                     </div>
                     <h3 class="font-display text-xl mb-1 leading-tight">Prototipo Shop Shell</h3>
                     
